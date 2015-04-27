@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TerrainGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="854" Width="1237">
+	<Grid>
+		<Border BorderThickness="1"
+			BorderBrush="#FF000000"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Top"
+			Margin="10,10,0,0">
+			<Image x:Name="PerlinMapImage" HorizontalAlignment="Left" Height="800" VerticalAlignment="Top" Width="800"/>
+		</Border>
+		<Grid HorizontalAlignment="Left" Height="802" Margin="822,11,0,0" VerticalAlignment="Top" Width="397">
+			<Label x:Name="label" Content="Amplitude" HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top" Width="171" HorizontalContentAlignment="Center" Padding="0"/>
+			<Button x:Name="GenerateBtn" Content="Generate Terrain" HorizontalAlignment="Left" Margin="0,215,0,0" VerticalAlignment="Top" Width="397" Height="32" Click="GenerateBtn_Click"/>
+			<CheckBox x:Name="Oct1Chk" Content="" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" IsChecked="True"/>
+			<CheckBox x:Name="Oct2Chk" Content="" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" IsChecked="True"/>
+			<CheckBox x:Name="Oct3Chk" Content="" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" IsChecked="True"/>
+			<CheckBox x:Name="Oct4Chk" Content="" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top"/>
+			<CheckBox x:Name="Oct5Chk" Content="" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top"/>
+			<CheckBox x:Name="Oct6Chk" Content="" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top"/>
+			<CheckBox x:Name="Oct7Chk" Content="" HorizontalAlignment="Left" Margin="10,171,0,0" VerticalAlignment="Top"/>
+			<CheckBox x:Name="Oct8Chk" Content="" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top"/>
+			<Slider x:Name="Oct1Amp" HorizontalAlignment="Left" Margin="35,31,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="256"/>
+			<Slider x:Name="Oct2Amp" HorizontalAlignment="Left" Margin="35,54,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="128"/>
+			<Slider x:Name="Oct3Amp" HorizontalAlignment="Left" Margin="35,77,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="64"/>
+			<Slider x:Name="Oct4Amp" HorizontalAlignment="Left" Margin="35,100,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="32"/>
+			<Slider x:Name="Oct5Amp" HorizontalAlignment="Left" Margin="35,123,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="16"/>
+			<Slider x:Name="Oct6Amp" HorizontalAlignment="Left" Margin="35,146,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="8"/>
+			<Slider x:Name="Oct7Amp" HorizontalAlignment="Left" Margin="35,169,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="4"/>
+			<Slider x:Name="Oct8Amp" HorizontalAlignment="Left" Margin="35,192,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="2"/>
+			<Slider x:Name="Oct1Freq" HorizontalAlignment="Left" Margin="216,54,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="4"/>
+			<Slider x:Name="Oct2Freq" HorizontalAlignment="Left" Margin="216,77,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="8"/>
+			<Slider x:Name="Oct3Freq" HorizontalAlignment="Left" Margin="216,100,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="16"/>
+			<Slider x:Name="Oct4Freq" HorizontalAlignment="Left" Margin="216,123,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="32"/>
+			<Slider x:Name="Oct5Freq" HorizontalAlignment="Left" Margin="216,146,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="64"/>
+			<Slider x:Name="Oct6Freq" HorizontalAlignment="Left" Margin="216,169,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="128"/>
+			<Slider x:Name="Oct7Freq" HorizontalAlignment="Left" Margin="216,192,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="256"/>
+			<Slider x:Name="Oct8Freq" HorizontalAlignment="Left" Margin="216,31,0,0" VerticalAlignment="Top" Width="171" Maximum="256" SmallChange="2" Value="2"/>
+			<Label x:Name="label_Copy" Content="Frequency" HorizontalAlignment="Left" Margin="216,10,0,0" VerticalAlignment="Top" Width="171" HorizontalContentAlignment="Center" Padding="0"/>
+			<Slider x:Name="CutOffLevel" HorizontalAlignment="Left" Margin="10,252,0,0" VerticalAlignment="Top" Width="377" Maximum="256" SmallChange="2" Value="128" ValueChanged="CutOffLevel_ValueChanged"/>
+			<Button x:Name="CutOffTerrain" Content="Cut Off Terrain" HorizontalAlignment="Left" Margin="0,275,0,0" VerticalAlignment="Top" Width="397" Height="32" Click="CutOffTerrain_Click"/>
+		</Grid>
+	</Grid>
 </Window>
